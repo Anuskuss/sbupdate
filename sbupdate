@@ -104,7 +104,6 @@ function get_kernels() {
         # Regular kernel
         kdir="$(dirname "${target}")"
         KERNELS+=("$(<"${kdir}/pkgbase")")
-        [[ -f "${kdir}/kernelbase" ]] && KERNELS[-1]="$(<"${kdir}/kernelbase")"
       else
         # Another dependency; update all kernels
         force_all=1
